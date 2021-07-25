@@ -8,4 +8,4 @@
 - The program has an option to exit
 
 ## lab 1 PR links:
-## 
+## https://github.com/hayabalasmeh/snakes-cafe/compare/lab-1?expand=1
