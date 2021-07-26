@@ -23,13 +23,19 @@ print('\n***********************************\n** What would you like to order? *
 
 all_menu_items = menu_list['Appetizers'] + \
     menu_list['Desserts'] + menu_list['Drinks'] + menu_list['Entrees']
+
 # print(all_menu_items)
 
-order = input('> ')
+order = input('> ').lower()
 orders = []
 orders.append(order)
 while order != 'quit':
-    if(order in all_menu_items):
+    new_list = []
+    for element in all_menu_items:
+
+        new_list.append(element.lower())
+
+    if(order in new_list):
         print(
             f"** {orders.count(order)} order of {order} have been added to your meal **")
 
@@ -37,7 +43,7 @@ while order != 'quit':
         print(
             f"** The item you requested is not in the menu but {orders.count(order)} order of {order} have been added to your meal **")
 
-    order = input('> ')
+    order = input('> ').lower()
     orders.append(order)
 
 
